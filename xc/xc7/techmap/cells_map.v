@@ -9724,3 +9724,106 @@ module PCIE_2_1 (
     .USERRSTN(USERRSTN)
   );
 endmodule
+
+module STARTUPE2 (
+  output CFGCLK,
+  output CFGMCLK,
+  output EOS,
+  output PREQ,
+  input CLK,
+  input GSR,
+  input GTS,
+  input KEYCLEARB,
+  input PACK,
+  input USRCCLKO,
+  input USRCCLKTS,
+  input USRDONEO,
+  input USRDONETS,
+);
+  parameter PROG_USR = "FALSE";
+  parameter SIM_CCLK_FREQ = 0.0;
+
+  STARTUPE2_VPR #(
+    .PROG_USR(PROG_USR),
+    .SIM_CCLK_FREQ(SIM_CCLK_FREQ),
+  )
+  _TECHMAP_REPLACE_ (
+    .CFGCLK(CFGCLK),
+    .CFGMCLK(CFGMCLK),
+    .EOS(EOS),
+    .PREQ(PREQ),
+    .CLK(CLK),
+    .GSR(GSR),
+    .GTS(GTS),
+    .KEYCLEARB(KEYCLEARB),
+    .PACK(PACK),
+    .USRCCLKO(USRCCLKO),
+    .USRCCLKTS(USRCCLKTS),
+    .USRDONEO(USRDONEO),
+    .USRDONETS(USRDONETS),
+  )
+endmodule
+
+module USR_ACCESSE2 (
+  output CFGCLK,
+  output [31:0] DATA,
+  output DATAVALID,
+);
+
+  USR_ACCESSE2_VPR _TECHMAP_REPLACE_ (
+    .CFGCLK(CFGCLK),
+    .DATA(DATA),
+    .DATAVALID(DATAVALID),
+  )
+endmodule
+
+module CAPTUREE2 (
+  input CLK,
+  input CAP,
+);
+  parameter ONESHOT = "TRUE";
+
+  CAPTUREE2_VPR #(
+    .ONESHOT(ONESHOT)
+  )
+  _TECHMAP_REPLACE_ (
+    .CLK(CLK),
+    .CAP(CAP),
+  )
+endmodule
+
+module DCIRESET (
+  input RST,
+  output LOCKED,
+);
+
+  DCIRESET_VPR _TECHMAP_REPLACE_ (
+    .RST(RST),
+    .LOCKED(LOCKED),
+  )
+endmodule
+
+module ICAPE2 (
+  input CLK,
+  input CSIB,
+  input RDWRB,
+  input 31:0] I,
+  output [31:0] O,
+);
+  parameter DEVICE_ID = 0'h3651093;
+  parameter ICAP_WIDTH = "X32";
+  parameter SIM_CFG_FILE_NAME = "NONE";
+
+  ICAPE2_VPR #(
+    .DEVICE_ID(DEVICE_ID),
+    .ICAP_WIDTH(ICAP_WIDTH),
+    .SIM_CFG_FILE_NAME(SIM_CFG_FILE_NAME),
+  )
+  _TECHMAP_REPLACE_ (
+    .CLK(CLK),
+    .CSIB(CSIB),
+    .RDWRB(RDWRB),
+    .I(I),
+    .O(O),
+  )
+endmodule

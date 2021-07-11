@@ -3379,3 +3379,59 @@ module PCIE_2_1_VPR (
   parameter [4:0] VC0_TX_LASTPACKET = 5'd0;
   parameter [1:0] CFG_ECRC_ERR_CPLSTAT = 2'd0;
 endmodule
+
+module STARTUPE2 (
+  output CFGCLK,
+  output CFGMCLK,
+  output EOS,
+  output PREQ,
+  input CLK,
+  input GSR,
+  input GTS,
+  input KEYCLEARB,
+  input PACK,
+  input USRCCLKO,
+  input USRCCLKTS,
+  input USRDONEO,
+  input USRDONETS,
+);
+  parameter PROG_USR = "FALSE";
+  parameter SIM_CCLK_FREQ = 0.0;
+
+endmodule
+
+module USR_ACCESSE2 (
+  output CFGCLK,
+  output [31:0] DATA,
+  output DATAVALID,
+);
+
+endmodule
+
+module CAPTUREE2 (
+  input CLK,
+  input CAP,
+);
+  parameter ONESHOT = "TRUE";
+
+endmodule
+
+module DCIRESET (
+  input RST,
+  output LOCKED,
+);
+
+endmodule
+
+module ICAPE2 (
+  input CLK,
+  input CSIB,
+  input RDWRB,
+  input 31:0] I,
+  output [31:0] O,
+);
+  parameter DEVICE_ID = 0'h3651093;
+  parameter ICAP_WIDTH = "X32";
+  parameter SIM_CFG_FILE_NAME = "NONE";
+
+endmodule
