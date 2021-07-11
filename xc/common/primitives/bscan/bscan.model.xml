@@ -1,0 +1,18 @@
+<models>
+  <module name="BSCANE2_VPR">
+    <input_ports>
+      <port clock="TCK" name="TDO"/>
+    </input_ports>
+    <output_ports>
+      <port is_clock="1" name="TCK"/>
+      <port clock="TCK" name="TCK"/>
+      <port clock="TCK" name="RESET"/>
+      <port clock="TCK" name="RUNTEST"/>
+      <port clock="TCK" name="SEL"/>
+      <port clock="TCK" name="SHIFT"/>
+      <port clock="TCK" name="TDI"/>
+      <port clock="TCK" name="TMS"/>
+      <port clock="TCK" name="UPDATE"/>
+    </output_ports>
+  </module>
+</models>

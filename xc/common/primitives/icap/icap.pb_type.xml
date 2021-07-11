@@ -1,0 +1,13 @@
+<pb_type name="ICAPE2" blif_model=".subckt ICAPE2_VPR" num_pb="1">
+  <input name="RST" num_pins="1"/>
+  <input name="CLK" num_pins="1"/>
+  <input name="CSIB" num_pins="1"/>
+  <input name="RDWRB" num_pins="1"/>
+  <input name="I" num_pins="32"/>
+  <output name="O" num_pins="32"/>
+  <meta name="fasm_params">
+    DEVICE_ID = DEVICE_ID
+    ICAP_WIDTH = ICAP_WIDTH
+    SIM_CFG_FILE_NAME = SIM_CFG_FILE_NAME
+  </meta>
+</pb_type>

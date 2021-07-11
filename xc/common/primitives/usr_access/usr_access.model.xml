@@ -1,0 +1,11 @@
+<models>
+  <module name="USR_ACCESSE2_VPR">
+    <input_ports>
+    </input_ports>
+    <output_ports>
+      <port is_clock="1"   name="CFGCLK"/>
+      <port clock="CFGCLK" name="DATA"/>
+      <port clock="CFGCLK" name="DATAVALID"/>
+    </output_ports>  
+  </module>
+</models>

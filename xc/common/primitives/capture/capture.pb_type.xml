@@ -1,0 +1,7 @@
+<pb_type name="CAPTUREE2" blif_model=".subckt CAPTUREE2_VPR" num_pb="1">
+  <input name="CLK" num_pins="1"/>
+  <input name="CAP" num_pins="1"/>
+  <meta name="fasm_params">
+    ONESHOT = ONESHOT
+  </meta>
+</pb_type>

@@ -1,0 +1,4 @@
+<pb_type name="DCIRESET" blif_model=".subckt DCIRESET_VPR" num_pb="1">
+  <output name="LOCKED" num_pins="1"/>
+  <input name="RST" num_pins="1"/>
+</pb_type>

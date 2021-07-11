@@ -1,0 +1,9 @@
+<pb_type name="STARTUPE2" blif_model=".subckt STARTUPE2_VPR" num_pb="1">
+  <clock name="CFGCLK" num_pins="1"/>
+  <output name="DATA" num_pins="32"/>
+  <output name="DATAINVALID" num_pins="1"/>
+  <meta name="fasm_params">
+    PROG_USR = PROG_USR
+    SIM_CCLK_FREQ = SIM_CCLK_FREQ
+  </meta>
+</pb_type>

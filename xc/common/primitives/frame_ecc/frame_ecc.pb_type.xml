@@ -1,0 +1,16 @@
+<pb_type name="FRAME_ECCE2" blif_model=".subckt FRAME_ECCE2_VPR" num_pb="1">
+  <input name="CLK" num_pins="1"/>
+  <input name="CAP" num_pins="1"/>
+  <input name="CRCERROR" num_pins="1"/>
+  <input name="ECCERROR" num_pins="1"/>
+  <input name="ECCERRORSINGLE" num_pins="1"/>
+  <input name="FAR" num_pins="26"/>
+  <input name="SYNBIT" num_pins="5"/>
+  <input name="SYNDROME" num_pins="13"/>
+  <input name="SYNDROME_VALID" num_pins="1"/>
+  <input name="SYNWORD" num_pins="7"/>
+  <meta name="fasm_params">
+    FARSRC = FARSRC
+    FRAME_RBT_IN_FILENAME = FRAME_RBT_IN_FILENAME
+  </meta>
+</pb_type>
