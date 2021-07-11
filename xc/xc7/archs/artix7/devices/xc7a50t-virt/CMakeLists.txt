@@ -24,6 +24,8 @@ add_xc_device_define_type(
     GTP_CHANNEL_2
     GTP_CHANNEL_3
     PCIE_BOT
+    CFG_CENTER_MID
+
   PB_TYPES
     SLICEL
     SLICEM
@@ -40,4 +42,11 @@ add_xc_device_define_type(
     IPAD
     OPAD
     PCIE_2_1
+    BSCAN
+    USR_ACCESS
+    CAPTURE
+    STARTUP
+    FRAME_ECC
+    DCIRESET
+    ICAP
 )
